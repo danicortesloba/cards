@@ -10,7 +10,7 @@ const DisplayCard = ({data, removeData}) => {
             <div key={index} className="card" style={{borderColor: card.border, backgroundColor: card.background}}>
                 <h3>{card.title}</h3>
                 <p>{card.description}</p>
-                <button onClick={() => removeData(index)}>Eliminar</button>
+                <button onClick={() => removeData(index)} className="delete">Eliminar</button>
             </div>
         ))}
         </div>

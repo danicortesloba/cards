@@ -51,4 +51,11 @@
     border-radius: 15px;
     margin: 10px;
     width: 200px;
+    padding: 20px;
+}
+
+.delete {
+    border-radius: 10px;
+    background-color: white;
+
 }
