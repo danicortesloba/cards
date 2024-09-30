@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types'
 
-const DisplayCard = ({data}) => {
+const DisplayCard = ({data, removeData}) => {
+
+ 
 
     return (
         <div className="cardContainer">
@@ -8,6 +10,7 @@ const DisplayCard = ({data}) => {
             <div key={index} className="card" style={{borderColor: card.border, backgroundColor: card.background}}>
                 <h3>{card.title}</h3>
                 <p>{card.description}</p>
+                <button onClick={() => removeData(index)}>Eliminar</button>
             </div>
         ))}
         </div>
@@ -17,7 +20,8 @@ const DisplayCard = ({data}) => {
 }
 
 DisplayCard.propTypes = {
-    data: PropTypes.array
+    data: PropTypes.array,
+    removeData: PropTypes.func
 }
 
 export default DisplayCard
